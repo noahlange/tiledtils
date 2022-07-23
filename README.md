@@ -16,8 +16,8 @@ Additional features:
 ```ts
 import * as PIXI from 'pixi.js';
 import { CompositeTilemap } from '@pixi/tilemap';
-import { Tiled } from 'gecs-tiled';
-import { loadTiledSpritesheets } from 'gecs-tiled/pixi';
+import { Tiled } from 'tiledtils';
+import { loadTiledSpritesheets } from 'tiledtils/pixi';
 import mapData from './my-map.json';
 
 const tiled = Tiled.from(mapData);
