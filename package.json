@@ -1,10 +1,10 @@
 {
   "name": "tiledtils",
   "version": "0.0.0",
-  "module": "./lib/index.js",
+  "main": "./lib/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "prepare": "tsc",
     "dev:test": "jest",
     "dev:pretty": "prettier --write 'src/**/*'",
     "dev:lint": "eslint --fix 'src/**/*'",

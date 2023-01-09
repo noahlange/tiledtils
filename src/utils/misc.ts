@@ -10,11 +10,11 @@ export function* iterateGrid(size: Size): IterableIterator<Vector2> {
   }
 }
 
-export function keys<T>(o: T): (keyof T)[] {
+export function keys<T extends {}>(o: T): (keyof T)[] {
   return Object.keys(o) as (keyof T)[];
 }
 
-export function entries<T>(o: T): [keyof T, T[keyof T]][] {
+export function entries<T extends {}>(o: T): [keyof T, T[keyof T]][] {
   return Object.entries(o) as [keyof T, T[keyof T]][];
 }
 
