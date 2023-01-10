@@ -32,7 +32,7 @@ export function getAtlasFromTileset(tileset: TilesetData): Atlas {
       id,
       frame: { x: point.x * tw, y: point.y * th, w: tw, h: th },
       offset: tileoffset ?? { x: 0, y: 0 },
-      properties: getTiledProperties({ properties })
+      properties: getTiledProperties(properties)
     };
 
     index++;

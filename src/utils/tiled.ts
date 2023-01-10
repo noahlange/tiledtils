@@ -1,12 +1,17 @@
-import type { Properties, TilesetData, WithProperties } from '../types';
+import type { Properties, Property, TilesetData } from '../types';
 
-export function getTiledProperties(o: WithProperties<unknown>): Properties {
-  return (
-    o.properties?.reduce(
-      (props, prop) => ({ ...props, [prop.name]: prop.value }),
-      {}
-    ) ?? {}
-  );
+import { _ } from './misc';
+
+export function getTiledProperties(properties: Property[] = []): Properties {
+  const res = {};
+  try {
+    for (const property of properties) {
+      _.set(res, property.name, property.value);
+    }
+  } catch (e) {
+    console.warn('Failed to flatten Tiled properties.');
+  }
+  return res;
 }
 
 export function getTilesetName(tileset: TilesetData): string {

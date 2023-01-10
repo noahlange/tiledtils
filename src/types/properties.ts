@@ -1,9 +1,10 @@
 export enum PropertyType {
   BOOLEAN = 'bool',
   COLOR = 'color',
-  STRING = 'string',
   FLOAT = 'float',
-  INTEGER = 'int'
+  INTEGER = 'int',
+  OBJECT = 'object',
+  STRING = 'string'
 }
 
 export type PropertyValue = string | boolean | number | null | undefined;
@@ -21,7 +22,7 @@ export type Property =
     }
   | {
       name: string;
-      type: PropertyType.FLOAT | PropertyType.INTEGER;
+      type: PropertyType.FLOAT | PropertyType.INTEGER | PropertyType.OBJECT;
       value: number;
     };
 
