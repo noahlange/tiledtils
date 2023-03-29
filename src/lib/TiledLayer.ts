@@ -119,7 +119,7 @@ export class TiledLayer {
         anchor: { x: 0.5, y: 1 },
         offset: { x: 0, y: 0 },
         id: o.id?.toString() ?? nanoid(8),
-        properties: getTiledProperties(o),
+        properties: getTiledProperties(o.properties),
         screen,
         world,
         get zIndex(): number {

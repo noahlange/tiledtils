@@ -82,7 +82,7 @@ export abstract class Tiled {
     this.tilesets = this.tilemap.tilesets;
     this.getTileID = getTileIdentifier(this.tilesets);
     this.atlases = getAtlasesFromTilesets(this.tilesets);
-    this.properties = getTiledProperties(this.tilemap);
+    this.properties = getTiledProperties(this.tilemap.properties);
     this.layers = data.layers.map(l => new TiledLayer(this, l));
   }
 }
