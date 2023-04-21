@@ -26,7 +26,7 @@ export async function loadSpritesheetFromTexture(
   }
 
   const sheet = new PIXI.Spritesheet(texture, { ...atlas, frames });
-  return new Promise(resolve => sheet.parse(() => resolve(sheet)));
+  return sheet.parse().then(() => sheet);
 }
 
 export async function loadSpritesheetsFromAtlas(

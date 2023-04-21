@@ -9,7 +9,7 @@
     "rootDir": "src",
     "outDir": "lib",
     "strict": true,
-    "importsNotUsedAsValues": "error"
+    "skipLibCheck": true
   },
   "include": ["src/**/*", "pixi.d.ts"]
 }

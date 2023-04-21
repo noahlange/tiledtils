@@ -4,4 +4,4 @@ export {
   loadSpritesheetsFromAtlas,
   loadSpritesheetsFromTilesets,
   loadTiledSpritesheets
-} from './src/pixi';
+} from './src/utils/pixi';

@@ -1,1 +1,1 @@
-export * from './lib/pixi';
+export * from './lib/utils/pixi';

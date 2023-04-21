@@ -1,8 +1,6 @@
-module.exports = {
+export default {
   coveragePathIgnorePatterns: ['<rootDir>/src/tests/helpers'],
-  globals: { 'ts-jest': { useESM: true } },
-  preset: 'ts-jest',
+  preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'jsdom',
-  testMatch: ['<rootDir>/src/**/*.test.ts'],
-  verbose: true
+  testMatch: ['<rootDir>/src/**/*.test.ts']
 };
